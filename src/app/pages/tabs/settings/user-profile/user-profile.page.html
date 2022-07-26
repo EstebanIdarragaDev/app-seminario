@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/settings"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <div class="profile-img">
+        {{iniciales}}
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div class="container">
+        <form action="">
+          <div class="form-control">
+            <label for="">Nombres</label>
+            <input type="text" placeholder="Nombres" value="{{user.nombres}}" #nombres>
+          </div>
+          <div class="form-control">
+            <label for="">Apellidos</label>
+            <input type="text" placeholder="Apellidos" value="{{user.apellidos}}" #apellidos>
+          </div>
+          <div class="form-control">
+            <label for="">Correo</label>
+            <input type="email" placeholder="Email" value="{{user.correo}}" #correo>
+          </div>
+          <button class="btn" (click)="editUser(nombres,apellidos,correo)">Editar</button>
+        </form>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

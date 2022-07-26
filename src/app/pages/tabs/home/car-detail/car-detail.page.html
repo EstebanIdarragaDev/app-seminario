@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <div class="container">
+        <div class="detail">
+          <div class="detail-header">
+            <h3>{{car.nombre}}</h3>
+            <h4>{{car.tipo}}</h4>
+          </div>
+          <div class="detail-car-img">
+            <img src="{{car.thumbnail}}" alt="">
+          </div>
+    
+          <div class="detail-content">
+            <p> <ion-icon name="person"></ion-icon> {{car.numero_pasajeros}} Pasajeros</p>
+            <p> <ion-icon name="bag"></ion-icon> {{car.numero_maleteros}} Maleteros</p>
+            <p> <ion-icon name="star"></ion-icon> 9.0/10</p>
+          </div>
+
+          <div class="detail-body">
+            <p>Dias a rentar</p>
+            <div class="box">
+              <div class="rest" (click)="disminuirDiasRenta()">-</div>
+              <div class="day" #dias>{{diasRenta}}</div>
+              <div class="add" (click)="incrementarDiasRenta()">+</div>
+            </div>
+            <p>${{car.valor_alquiler}}/dia</p>
+          </div>
+
+          <a class="btn" (click)="createInvoice()">Rentar</a>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

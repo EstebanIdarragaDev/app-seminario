@@ -1,0 +1,90 @@
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    padding: 20px;
+}
+
+.detail-header h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #35424A;
+}
+
+.detail-header h4{
+    font-size: 1.1rem;
+    font-weight: 100;
+    color: #989EB1;
+}
+
+.detail-car-img{
+    width: 100%;
+    height: 220px;
+    // background: #000;
+}
+.detail-car-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.detail-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.detail-content p{
+    color: #35424A;
+    font-weight: 100;
+}
+.detail-body{
+    margin: 30px 0 0;
+}
+.detail-body p{
+    color: #35424A;
+}
+.detail-body p:last-child{
+    text-align: right;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.detail-body .box{
+    width: 100%;
+    height: 60px;
+    background: gray;
+    border-radius: 5px;
+    display: flex;
+}
+.detail-body .box .add,
+.detail-body .box .rest
+{
+    width: 20%;
+    height: 100%;
+    background: #8A8A8A;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 1.8rem;
+    border-radius: 5px;
+}
+.detail-body .box .day{
+    width: 60%;
+    height: 100%;
+    background: #E8E8E8;
+    text-align: center;
+    line-height: 60px;
+}
+.btn{
+    display: block;
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    background: #7fe1ad;
+    border-radius: 5px;
+    color: #fff;
+}

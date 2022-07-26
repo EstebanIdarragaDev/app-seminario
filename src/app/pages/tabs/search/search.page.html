@@ -1,0 +1,74 @@
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <div class="nav">
+        <div class="header">
+          <div class="title">
+            <h3>Buscar</h3>
+          </div>
+        </div>
+        <div class="content">
+          <ion-buttons slot="end">
+            <ion-button color="dark">
+              <ion-icon name="camera-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <div class="container">
+        <div class="search">
+          <input type="text" placeholder="Renault,Toyota,Ferrari" #brand>
+          <button class="btn" (click)="getCarsByBrand(brand)">Buscar</button>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <div class="container" *ngIf="cars.length > 0">
+        <div class="cars" *ngFor="let car of cars">
+          <div class="card">
+            <div class="card-header">
+              <h3>{{car.nombre}}</h3>
+              <h4>{{car.tipo}}</h4>
+            </div>
+
+            <div class="card-body">
+              <div class="content">
+                <p>
+                  <ion-icon name="person"></ion-icon>
+                  {{car.numero_pasajeros}} pasajeros
+                </p>
+                <p>
+                  <ion-icon name="bag"></ion-icon>
+                  {{car.numero_maleteros}} maleteros
+                </p>
+              </div>
+              <div class="image">
+                <img src="https://seetech-corp.com/wp-content/uploads/2016/10/Car-PNG-File.png" alt="">
+              </div>
+
+            </div>
+
+            <div class="card-footer">
+              <div class="buttons">
+                <!-- <button class="btn">Ver</button> -->
+                <a [href]="['/tabs/home/car-detail/'+car._id]" class="btn-card">Ver</a>
+              </div>
+  
+              <div class="price">
+                <p>${{car.valor_alquiler}}<span>/dia</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

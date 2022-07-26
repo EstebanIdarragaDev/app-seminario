@@ -1,0 +1,53 @@
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <div class="container">
+        <div class="profile">
+          <div class="image">
+            {{iniciales}}
+          </div>
+          <div class="data">
+            <div class="data-name">
+              <h3>{{user.nombres}} {{user.apellidos}}</h3>
+              <h4>{{user.cedula}}</h4>
+            </div>
+  
+            <div class="data-action">
+              <ion-icon name="create" class="icono" (click)="editUser(user['_id'])"></ion-icon>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <div class="container">
+        <p>Historial</p>
+        <div class="history-container" *ngIf="invoices.length > 0;else noInvoice">
+          <div class="invo">
+            <div class="inovice-name">
+              <div class="details" *ngFor="let car of cars" >
+                <p>{{car.nombre}}</p>
+              </div>
+            </div>
+            <div class="">
+              <div class="route" *ngFor="let invoice of invoices">
+                <a [href]="['/tabs/settings/invoice-detail/'+invoice._id]">Detalles</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+      <ng-template #noInvoice>
+        <p class="ion-text-center">Sin facturas</p>
+      </ng-template>
+    </ion-col>
+  </ion-row>
+</ion-content>

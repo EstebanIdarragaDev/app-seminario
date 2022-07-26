@@ -1,0 +1,54 @@
+<!-- <ion-header class="header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <div class="register-header">
+        <h3>Registrarse</h3>
+      </div>
+      <div class="register-body">
+        <form action="">
+          <div class="form-control">
+            <label for="">Nombres</label>
+            <input type="text" placeholder="Tus nombres" #nombres>
+          </div>
+          <div class="form-control">
+            <label for="">Apellidos</label>
+            <input type="text" placeholder="Tus Apellidos" #apellidos>
+          </div>
+          <div class="form-control">
+            <label for="">Cedula</label>
+            <input type="number" min="5" max="5" placeholder="CC" #cedula>
+          </div>
+          <div class="form-control">
+            <label for="">Email</label>
+            <input type="email" placeholder="ejemplo@email.com" #email>
+          </div>
+          <div class="form-control">
+            <label for="">Contraseña</label>
+            <input type="password" placeholder="Contraseña" #contrasena>
+          </div>
+          <div class="check">
+            <label for="">
+              <!-- <input type="checkbox" name="" id=""> -->
+              Acepto los Términos de servicios y la Política
+de privacidad.
+            </label>
+          </div>
+
+          <button class="btn" (click)="createUser(nombres,apellidos,cedula,email,contrasena)">Registrarse</button>
+        </form>
+      </div>
+      <div class="register-footer">
+        <p>Tienes una cuenta ? <a [href]="['/home']">Iniciar Sesion</a></p>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,20 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+    <ion-row>
+        <ion-col>
+            <div class="login-header">
+                <div class="img">
+                    <img src="https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                </div>
+                <h3>Renta de Autos</h3>
+            </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+            <div class="login-body">
+                <h3>Iniciar sesion</h3>
+                <p>!Hola¡ Qué gusto verte de nuevo</p>
+                <form action="">
+                    <div class="form-control">
+                        <label for="">Usuario</label>
+                        <input type="text" placeholder="user@email.com" #user>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Contraseña</label>
+                        <input type="password" placeholder="Password" #password>
+                    </div>
+    
+                    <button class="btn" (click)="validateLogin(user,password)">Iniciar Sesion</button>
+                </form>
+            </div>
+            <div class="login-footer">
+                <p>Olvido su Contraseña ?</p>
+                <a [href]="['/register']">Registrarse</a>
+            </div>
+        </ion-col>
+    </ion-row>
 </ion-content>

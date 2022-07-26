@@ -1,0 +1,73 @@
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding: 20px;
+}
+.profile .image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #0094ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #fff;
+}
+.profile .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile .data{
+    text-align: center;
+    margin-top: 20px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+.profile .data-name h3{
+    color: #35424A;
+    font-weight: 700;
+}
+.profile .data-name h4{
+    font-weight: 100;
+    color: #989EB1;
+    font-size: 1.1rem;
+}
+
+.data .icono{
+    font-size: 1.5rem;
+}
+
+.history-container{
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    margin-top: 10px;
+
+}
+.history-container .invo{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #989eb1;
+    border-radius: 5px;
+}
+.history-container .invoice-name{
+    width: 60%;
+}
+.history-container .details p{
+    color: #fff;
+    margin-bottom: 10px;
+}
+.history-container .route a{
+    display: inline-block;
+    text-decoration: none;
+    color: #0094ea;
+    margin-bottom: 10px;
+}

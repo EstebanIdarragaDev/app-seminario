@@ -1,0 +1,34 @@
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    padding: 20px;
+}
+.container>h3{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #35424A;
+    margin-bottom: 20px;
+}
+
+.invoice-header h3{
+    font-size: 1.2rem;
+    color: #35424A;
+    font-weight: 100;
+}
+.invoice-header h4{
+    color: #989EB1;
+    font-size: 1.1rem;
+}
+.invoice-image{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 40px;
+}
+.invoice-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
