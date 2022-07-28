@@ -6,7 +6,7 @@ import { Car } from '../models/car';
 })
 export class CarService implements OnInit{
 
-  private api = 'http://localhost:4000/cars';
+  private api = 'https://api-seminario-2022.herokuapp.com/cars';
   constructor(private http:HttpClient) { }
 
   

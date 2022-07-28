@@ -7,7 +7,7 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  private api = "http://localhost:4000/users"
+  private api = "https://api-seminario-2022.herokuapp.com/users"
   constructor(private http:HttpClient) { }
 
   getAllUsers(){

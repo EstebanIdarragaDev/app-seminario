@@ -7,7 +7,7 @@ import { Invoice } from '../models/invoice';
   providedIn: 'root'
 })
 export class InvoiceService {
-  private api = 'http://localhost:4000/invoices'
+  private api = 'https://api-seminario-2022.herokuapp.com/invoices'
   constructor(
     private http:HttpClient
     ) { }
